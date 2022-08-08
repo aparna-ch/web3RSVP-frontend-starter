@@ -1,6 +1,6 @@
-import Landing from "../components/Landing";
 import { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
+import Landing from "../components/Landing";
 import EventCard from "../components/EventCard";
 
 const UPCOMING_EVENTS = gql`
@@ -13,6 +13,7 @@ const UPCOMING_EVENTS = gql`
     }
   }
 `;
+
 export default function Home() {
   const [currentTimestamp, setEventTimestamp] = useState(
     new Date().getTime().toString()
