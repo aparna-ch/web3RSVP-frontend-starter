@@ -1,8 +1,8 @@
-import Dashboard from "../../components/Dashboard";
 import { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
+import Dashboard from "../../components/Dashboard";
 import EventCard from "../../components/EventCard";
 
 const MY_PAST_RSVPS = gql`
@@ -20,7 +20,6 @@ const MY_PAST_RSVPS = gql`
     }
   }
 `;
-
 
 export default function MyPastRSVPs() {
   const { data: account } = useAccount();
